@@ -72,7 +72,7 @@ public class CEmotionDataList
 
                 cData.strUrl = json.getString ( "url" );
 
-                Log.i ( "Json Log:", cData.strUrl );
+                //Log.i ( "Json Log:", cData.strUrl );
 
                 cData.bmpIcon = null;
 

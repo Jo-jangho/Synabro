@@ -9,7 +9,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,6 +30,7 @@ import java.util.ArrayList;
 
 public class CEmotionClient extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    /* value */
     String message;
 
     Toolbar toolbar;
@@ -43,6 +43,7 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
     ArrayList<ImageView> menuList = new ArrayList<ImageView> ();
     ArrayList<CMenuData> menuData = new ArrayList<CMenuData> ();
 
+    /* */
     class CMenuData
     {
         String m_url = null;

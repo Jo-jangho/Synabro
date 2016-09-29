@@ -92,14 +92,14 @@ public class CStoryDataList
 
                 CWebInterface.GetInstance ().Request ( "Img" + i, CDefineUrl.youtubeThumbnail1 + strImg_url1 + CDefineUrl.youtubeThumbnail2 + strImg_url2 );
 
-                Log.i ( "Data:", json.getString ( "name" ) );
+                //Log.i ( "Data:", json.getString ( "name" ) );
 
             }
         }
         catch ( JSONException e )
         {
             e.printStackTrace ();
-            Log.i ( "json", "json err!! " + e );
+            //Log.i ( "json", "json err!! " + e );
 
             return;
         }
@@ -124,7 +124,7 @@ public class CStoryDataList
 
             if ( cWebData.eState == CWebInterface.EState.error )
             {
-                Log.i ( "error", cWebData.strErr );
+                //Log.i ( "error", cWebData.strErr );
                 return;
             }
 

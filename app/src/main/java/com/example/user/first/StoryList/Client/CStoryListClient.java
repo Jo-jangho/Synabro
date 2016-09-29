@@ -50,9 +50,6 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     }
 
     /* value */
-    final String url = "https://www.youtube.com/watch?v=";
-
-
     CBSListview cBSListview;
     ScrollView scrollView;
     Toolbar toolbar;
@@ -112,7 +109,6 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         navHeaderTxt.setText(message);
 
         /* 리스트 아이템 Init*/
-        //listView.setAdapter(cStoryList);
         listView.setOnItemClickListener(mItemClickListener);
     }
 

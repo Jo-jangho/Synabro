@@ -14,10 +14,4 @@ public class CDeveloperKey
    * to register a new developer key.
    */
   public static final String DEVELOPER_KEY = "AIzaSyC0P4760KqXCo5DHWfnBMhBEa3glwL90SI";
-
-
-
-
-
-
 }
