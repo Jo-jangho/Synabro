@@ -73,8 +73,9 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         cBSListview = new CBSListview(listView);
 
         CStoryDataList.CData cData;
-        int i = CStoryDataList.GetInstance().Size();
-        while(--i >= 0)
+        int size = CStoryDataList.GetInstance().Size();
+        int i = 0;
+        while(i < size)
         {
             cData = CStoryDataList.GetInstance().Get(i);
 
@@ -87,6 +88,8 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
             cItem.bmpIcon = cData.bmpIcon;
 
             cBSListview.AddItem(cItem);
+
+            i++;
         }
 
         cBSListview.OnDraw(OnDraw);

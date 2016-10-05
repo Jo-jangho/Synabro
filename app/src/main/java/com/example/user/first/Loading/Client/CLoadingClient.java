@@ -11,6 +11,10 @@ import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.Loading.Interface.CLoader;
 import com.example.user.first.R;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 /**
  * Created by Administrator on 2016-07-22.
@@ -40,6 +44,16 @@ public class CLoadingClient extends AppCompatActivity
         str = cTextFileManager.load();
 
         TView = (TextView)findViewById(R.id.loading);
+
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+                .threadPriority(Thread.NORM_PRIORITY - 2)
+                .denyCacheImageMultipleSizesInMemory()
+                .discCacheFileNameGenerator(new Md5FileNameGenerator())
+                .tasksProcessingOrder(QueueProcessingType.LIFO)
+                .writeDebugLogs() // Remove for release app
+                .build();
+
+        ImageLoader.getInstance().init(config);
 
         /**/
         CWebInterface.DestroyInstance();
